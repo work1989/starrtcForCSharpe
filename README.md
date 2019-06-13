@@ -1,64 +1,26 @@
-# starrtc windows示例程序
+# starrtc c# 由于时间原因,本人只是完成了对一对一视频的集成更改,相信有了这个案例,可以让大家迅速集成其他版本
+1.首先将c++源代码CVoipDlg.h 改成了对应的YPVoip.h,基本99%的代码不需要更改,大家可以直接参考
+2.利用dllexport 关键字开放几个函数给c#调用,分别是YPLogin(登录),VoipCallPerson(呼叫),DeleteVoip(释放资源)
+3.注释相关无用代码 入口处starrtcdemo.cpp文件里面注释以下代码,并将retrun FALSE改为return TRUE
+  //CStarRTCMenuDialog dlg;
+	//m_pMainWnd = &dlg;
+	//INT_PTR nResponse = dlg.DoModal();
+	//if (nResponse == IDOK)
+	//{
+	//	// TODO: 在此放置处理何时用
+	//	//  “确定”来关闭对话框的代码
+	//}
+	//else if (nResponse == IDCANCEL)
+	//{
+	//	// TODO: 在此放置处理何时用
+	//	//  “取消”来关闭对话框的代码
+	//}
+	//else if (nResponse == -1)
+	//{
+	//	TRACE(traceAppMsg, 0, "警告: 对话框创建失败，应用程序将意外终止。\n");
+	//	TRACE(traceAppMsg, 0, "警告: 如果您在对话框上使用 MFC 控件，则无法 #define _AFX_NO_MFC_CONTROLS_IN_DIALOGS。\n");
+	//}
+4.配置属性
+  将项目默认值->配置类型 改为动态库(dll)
+5.c/c++ 里面的优化改为 已禁用 (/Od) 否则c#无法实例化类
 
-
-![主界面](assets/主界面.png)
-
-本产品完全免费，并且提供免费的私有部署服务端程序，支持全部功能，并提供第三方拉流、推流功能。
-
-需要我们支持请加QQ群：807242783
-
-如需私有部署，请到如下地址下载：
-
-https://github.com/starrtc/starrtc-server
-
-
-示例程序请运行release目录里面的starrtcdemo.exe
-
-工程所在目录：starrtcdemo\starrtcdemo.sln
-
-已实现im单聊，聊天室，群组；视频监控，voip，互动连麦直播，多人视频会议；
-
-
-本示例程序可以与[其它端示例程序](https://docs.starrtc.com/en/download/)互连互通。
-
-开发集成
-====
-头文件 third\starrtccoredll
-动态库 release\starrtc-demo
-
-IM
-====
-![IM_一对一](assets/IM_一对一.png)
-
-![聊天室](assets/聊天室.png)
-
-VOIP视频通话
-====
-![VOIP](assets/VOIP.png)
-
-
-多人会议
-====
-![多人会议](assets/多人会议.png)
-
-
-互动直播
-====
-![互动直播](assets/互动直播.png)
-
-
-监控
-====
-![监控](assets/监控.png)
-
-Contact
-=====
-QQ ： 2162498688
-
-邮箱：<a href="mailto:support@starRTC.com">support@starRTC.com</a>
-
-手机: 186-1294-6552
-
-微信：starRTC
-
-QQ群：807242783
