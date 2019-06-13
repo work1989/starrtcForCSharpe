@@ -30,7 +30,7 @@ starrtc c# 由于时间原因,本人只是完成了对一对一视频的集成�
 ##c++项目设置2
 ![c++Set2](set2.png)
 ##csharpe调用示例
-![csharpe调用示例](csharpe.png)
-##csharpe集成结果
+![csharpe调用示例](csharpe.png)<br>
+##csharpe集成结果<br>
 ![csharpe集成结果](su.png)
 
